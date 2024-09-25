@@ -1,19 +1,13 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import SignInScreen from './src/screens/actions/authentication/signIn';
-import SignUpScreen from './src/screens/actions/authentication/signUp';
-
-const Stack = createStackNavigator();
+import { View ,Text,StyleSheet} from 'react-native';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignIn">
-        <Stack.Screen name="SignIn" component={SignInScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+   <View>
+    <Text style={{fontSize:100}}>
+      hilkhsdvj/WEV'OIKWVNKVI
+    </Text>
+   </View>
   );
 };
 

@@ -1,0 +1,28 @@
+{
+    "categories": [
+      { "name": "Tables", "icon": "table-bar" },
+      { "name": "Beds", "icon": "bed" },
+      { "name": "Chairs", "icon": "event-seat" },
+      { "name": "Storage", "icon": "archive" },
+      { "name": "Sofas", "icon": "weekend" }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Small Living Table",
+        "brand": "Walter Knoll",
+        "price": 750,
+        "description": "A compact and stylish living room table, perfect for modern homes. Crafted from high-quality wood, this table features a minimalist design with clean lines.",
+        "image": "https://example.com/table.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Pole Brown Chair",
+        "brand": "Rolf Benz",
+        "price": 1000,
+        "description": "A comfortable and elegant chair with a modern design. The Pole Brown Chair combines luxury and ergonomics, making it a perfect fit for any living space.",
+        "image": "https://example.com/chair.jpg"
+      }
+    ]
+  }
+  

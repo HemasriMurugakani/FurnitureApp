@@ -1,17 +1,17 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-const FlatCard = ({ category, onPress }) => {
+
+const FlatCard = ({ title, description, imageUri, onPress }) => {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
       <View style={styles.cardContent}>
         <View style={{ justifyContent: 'center', bottom: 10 }}>
-          <Text style={styles.cardTitle}>{category.name}</Text>
-          <Text style={styles.cardDescription}>{category.collection}</Text>
+          <Text style={styles.cardTitle}>{title}</Text>
+          <Text style={styles.cardDescription}>{description}</Text>
         </View>
-        <View>
-          {/* {category.icon}         */}
-        </View>
-        
+        {imageUri && (
+          <Image source={{ uri: imageUri }} style={styles.cardImage} />
+        )}
       </View>
     </TouchableOpacity>
   );

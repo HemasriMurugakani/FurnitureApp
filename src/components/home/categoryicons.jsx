@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-// import { MaterialIcons } from '@expo/vector-icons';
 
 const categories = [
   { name: 'Tables', icon: 'table-bar' },

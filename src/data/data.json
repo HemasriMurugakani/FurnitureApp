@@ -1,10 +1,10 @@
 {
     "categories": [
-      { "name": "Tables", "icon": "table-bar" },
-      { "name": "Beds", "icon": "bed" },
-      { "name": "Chairs", "icon": "event-seat" },
-      { "name": "Storage", "icon": "archive" },
-      { "name": "Sofas", "icon": "weekend" }
+      { "name": "Tables", "icon": "table-bar","collection":"2 New Collections"},
+      { "name": "Beds", "icon": "bed","collection":"1 New Collections" },
+      { "name": "Chairs", "icon": "event-seat","collection":"3 New Collections" },
+      { "name": "Storage", "icon": "archive","collection":"2 New Collections" },
+      { "name": "Sofas", "icon": "weekend","collection":"3 New Collections" }
     ],
     "products": [
       {
@@ -13,7 +13,7 @@
         "brand": "Walter Knoll",
         "price": 750,
         "description": "A compact and stylish living room table, perfect for modern homes. Crafted from high-quality wood, this table features a minimalist design with clean lines.",
-        "image": "https://example.com/table.jpg"
+        "image": "https://www.pngarts.com/files/7/Modern-Furniture-Transparent-Background-PNG.png"
       },
       {
         "id": 2,
@@ -21,7 +21,23 @@
         "brand": "Rolf Benz",
         "price": 1000,
         "description": "A comfortable and elegant chair with a modern design. The Pole Brown Chair combines luxury and ergonomics, making it a perfect fit for any living space.",
-        "image": "https://example.com/chair.jpg"
+        "image": "https://www.pngarts.com/files/3/Elegant-Table-PNG-Picture.png"
+      },
+      {
+        "id": 2,
+        "name": "Pole Brown Chair",
+        "brand": "Rolf Benz",
+        "price": 1000,
+        "description": "A comfortable and elegant chair with a modern design. The Pole Brown Chair combines luxury and ergonomics, making it a perfect fit for any living space.",
+        "image": "https://www.pngarts.com/files/4/Bed-Transparent-Background-PNG.png"
+      },
+      {
+        "id": 2,
+        "name": "Pole Brown Chair",
+        "brand": "Rolf Benz",
+        "price": 1000,
+        "description": "A comfortable and elegant chair with a modern design. The Pole Brown Chair combines luxury and ergonomics, making it a perfect fit for any living space.",
+        "image": "https://www.pngarts.com/files/7/Chair-Furniture-Transparent-Image.png"
       }
     ]
   }

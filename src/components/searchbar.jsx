@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 // import { Ionicons } from '@expo/vector-icons';
-
-const SearchBar = () => {
+const SearchBar = ({width,height}) => {
+ 
   return (
-    <View style={styles.searchContainer}>
+    <View style={[styles.searchContainer,{width,height}]}>
       <TextInput
         style={styles.searchInput}
         placeholder="Search furniture"
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     backgroundColor: '#f0f0f0',
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: 25,
+    padding: 13,
   },
 });
 

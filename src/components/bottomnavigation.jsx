@@ -1,39 +1,41 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-// import { Ionicons } from '@expo/vector-icons';
-
+// import HomeIcon from '../assets/Icons/HomeIcon';
 const BottomNavigation = () => {
   return (
+    <>
     <View style={styles.navContainer}>
-      {/* <TouchableOpacity style={styles.navItem}>
-        <Ionicons name="home-outline" size={24} color="black" />
+      <TouchableOpacity style={styles.navItem}>
         <Text>Home</Text>
+        {/* <HomeIcon/>  */}
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <Ionicons name="search-outline" size={24} color="black" />
+        
         <Text>Discover</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <Ionicons name="heart-outline" size={24} color="black" />
+        
         <Text>Wishlist</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <Ionicons name="cart-outline" size={24} color="black" />
+       
         <Text>Order</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <Ionicons name="person-outline" size={24} color="black" />
+       
         <Text>Profile</Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
     </View>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   navContainer: {
+    height:70,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    padding: 10,
+    padding: 20,
     backgroundColor: '#f8f8f8',
     borderTopColor: '#e0e0e0',
     borderTopWidth: 1,

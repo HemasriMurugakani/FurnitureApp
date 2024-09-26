@@ -15,7 +15,7 @@ const Banner = () => {
 
 const styles = StyleSheet.create({
   bannerContainer: {
-    backgroundColor: '#f0f0f0',
+    backgroundColor: 'white',
     padding: 20,
     borderRadius: 10,
     marginVertical: 10,

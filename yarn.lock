@@ -38,6 +38,8 @@
 
 "@babel/eslint-parser@^7.12.0", "@babel/eslint-parser@^7.20.0":
   version "7.25.1"
+  resolved "https://registry.npmjs.org/@babel/eslint-parser/-/eslint-parser-7.25.1.tgz"
+  integrity sha512-Y956ghgTT4j7rKesabkh5WeqgSFZVFwaPR0IWFm7KFHFmmJ4afbG49SmfW4S+GyRPx0Dy5jxEWA5t0rpxfElWg==
   dependencies:
     "@nicolo-ribaudo/eslint-scope-5-internals" "5.1.1-v1"
     eslint-visitor-keys "^2.1.0"
@@ -1424,8 +1426,10 @@
 "@react-native/normalize-colors@0.75.3":
   version "0.75.3"
 
-"@react-native/typescript-config@0.75.3":
+"@react-native/typescript-config@^0.75.3":
   version "0.75.3"
+  resolved "https://registry.npmjs.org/@react-native/typescript-config/-/typescript-config-0.75.3.tgz"
+  integrity sha512-yekwhjG9lDvib+3jYwagEXcyTJ4mEryDLCoQINWCwy+7GtMx2BrKweHc4Phcc1dqmK1U/XMzVUXF3X3hc+FVPA==
 
 "@react-native/virtualized-lists@0.75.3":
   version "0.75.3"
@@ -2393,6 +2397,8 @@ css-tree@^1.1.3:
     mdn-data "2.0.14"
     source-map "^0.6.1"
 
+<<<<<<< HEAD
+=======
 css-tree@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/css-tree/-/css-tree-2.3.1.tgz"
@@ -2409,11 +2415,14 @@ css-tree@~2.2.0:
     mdn-data "2.0.28"
     source-map-js "^1.0.1"
 
+>>>>>>> 1e14a4437b830cb29643e7d8efb870ef62ef0895
 css-what@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/css-what/-/css-what-6.1.0.tgz"
   integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
 
+<<<<<<< HEAD
+=======
 csso@^5.0.5:
   version "5.0.5"
   resolved "https://registry.npmjs.org/csso/-/csso-5.0.5.tgz"
@@ -2421,6 +2430,7 @@ csso@^5.0.5:
   dependencies:
     css-tree "~2.2.0"
 
+>>>>>>> 1e14a4437b830cb29643e7d8efb870ef62ef0895
 csstype@^3.0.2:
   version "3.1.3"
 
@@ -2564,6 +2574,8 @@ domutils@^3.0.1:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
+<<<<<<< HEAD
+=======
 dot-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/dot-case/-/dot-case-3.0.4.tgz"
@@ -2572,6 +2584,7 @@ dot-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
+>>>>>>> 1e14a4437b830cb29643e7d8efb870ef62ef0895
 ee-first@1.1.1:
   version "1.1.1"
 
@@ -2590,7 +2603,11 @@ encodeurl@~1.0.2:
 encodeurl@~2.0.0:
   version "2.0.0"
 
+<<<<<<< HEAD
+entities@^4.2.0:
+=======
 entities@^4.2.0, entities@^4.4.0:
+>>>>>>> 1e14a4437b830cb29643e7d8efb870ef62ef0895
   version "4.5.0"
   resolved "https://registry.npmjs.org/entities/-/entities-4.5.0.tgz"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
@@ -3980,6 +3997,8 @@ mdn-data@2.0.14:
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.14.tgz"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
+<<<<<<< HEAD
+=======
 mdn-data@2.0.28:
   version "2.0.28"
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.28.tgz"
@@ -3990,6 +4009,7 @@ mdn-data@2.0.30:
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.30.tgz"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
+>>>>>>> 1e14a4437b830cb29643e7d8efb870ef62ef0895
 memoize-one@^5.0.0:
   version "5.2.1"
 
@@ -4641,6 +4661,9 @@ react-native-screens@^3.34.0, "react-native-screens@>= 3.0.0":
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
 
+<<<<<<< HEAD
+react-native-svg@^15.7.1:
+=======
 react-native-svg-transformer@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/react-native-svg-transformer/-/react-native-svg-transformer-1.5.0.tgz"
@@ -4652,6 +4675,7 @@ react-native-svg-transformer@^1.5.0:
     path-dirname "^1.0.2"
 
 react-native-svg@^15.7.1, react-native-svg@>=12.0.0:
+>>>>>>> 1e14a4437b830cb29643e7d8efb870ef62ef0895
   version "15.7.1"
   resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-15.7.1.tgz"
   integrity sha512-Xc11L4t6/DtmUwrQqHR7S45Qy3cIWpcfGlmEatVeZ9c1N8eAK79heJmGRgCOVrXESrrLEHfP/AYGf0BGyrvV6A==
@@ -4660,6 +4684,9 @@ react-native-svg@^15.7.1, react-native-svg@>=12.0.0:
     css-tree "^1.1.3"
     warn-once "0.1.1"
 
+<<<<<<< HEAD
+react-native@*, react-native@0.75.3:
+=======
 react-native-vector-icons@^10.2.0:
   version "10.2.0"
   resolved "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-10.2.0.tgz"

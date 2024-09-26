@@ -1,19 +1,26 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-// import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation
 
 const ProductCard = ({ product }) => {
+  const navigation = useNavigation(); // Access the navigation object
+
+  const handlePress = () => {
+    // Navigate to ProductDetails screen, passing the product as a parameter
+    navigation.navigate('ProductDetails', { product });
+  };
+
   return (
-    <View style={styles.card}>
+    <TouchableOpacity onPress={handlePress} style={styles.card}> {/* Wrap with TouchableOpacity */}
       <Image source={{ uri: product.image }} style={styles.productImage} />
       <Text style={styles.productName}>{product.name}</Text>
       <Text style={styles.productBrand}>{product.brand}</Text>
-      <Text style={styles.productdescription}>{product.description}</Text>
+      <Text style={styles.productDescription}>{product.description}</Text>
       <Text style={styles.price}>${product.price}</Text>
       <TouchableOpacity style={styles.heartIcon}>
         {/* <AntDesign name="hearto" size={24} color="black" /> */}
       </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
   );
 };
 

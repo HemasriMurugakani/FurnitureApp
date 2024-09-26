@@ -30,7 +30,6 @@ export default function DiscoverScreen() {
           ))}
         </ScrollView>
         <View style={{ justifyContent: 'flex-end', height: 60 }}>
-          <BottomNavigation />
         </View>
       </View>
     </>

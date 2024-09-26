@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { Svg, Path } from 'react-native-svg';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const BottomNavigation = () => {
+const BottomNavigation = ({ navigation }) => { // Destructure navigation prop
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.tab}>
@@ -46,7 +46,10 @@ const BottomNavigation = () => {
         <Text style={styles.inactiveText}>Order</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tab}>
+      <TouchableOpacity 
+        style={styles.tab} 
+        onPress={() => navigation.navigate('Profile')} // Navigate to Profile page
+      >
         <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <Path
             d="M12 12c-2.208 0-4-1.792-4-4s1.792-4 4-4 4 1.792 4 4-1.792 4-4 4zm0 2c-2.67 0-8 1.336-8 4v2h16v-2c0-2.664-5.33-4-8-4z"
@@ -81,12 +84,12 @@ const styles = {
   },
   activeText: {
     color: '#D97B3A',
-    fontSize:12,
+    fontSize:14,
     
   },
   inactiveText: {
     color: '#ccc',
-    fontSize:12,
+    fontSize:14,
   },
 };
 

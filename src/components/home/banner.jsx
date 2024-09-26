@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
-import { Svg, Path } from 'react-native-svg'; // Import SVG for the arrow icon
+import { Svg, Path } from 'react-native-svg'; 
 
 const ArrowIcon = ({ size = 30 }) => (
   <Svg height={size} width={size} viewBox="0 0 24 16">
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
     marginLeft:20,
     overflow: 'hidden', // Ensure the image fits within the rounded edges
     justifyContent: 'center', // Center the content
-    width:280,
-    height:160,
+    width:360,
+    height:190,
     marginTop:-10,
     marginBottom:10,
   },
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
   },
   bannerDescription: {
     color: 'white', // Change text color for better visibility
-    fontSize:12,
-    paddingRight:80,
+    fontSize:14,
+    paddingRight:85,
   },
   shopNowButton: {
     marginTop: 10,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     marginRight: 5, // Space between text and icon
-    fontSize:11,
+    fontSize:12,
     fontWeight:'bold',
     marginLeft:15,
   },

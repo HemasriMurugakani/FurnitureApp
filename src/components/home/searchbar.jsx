@@ -1,42 +1,43 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Image } from 'react-native';
-
-const SearchBar = () => {
+import { View, TextInput, StyleSheet, TouchableOpacity,Image } from 'react-native';
+import Search from '../../assets/icons/search';
+// import { Ionicons } from '@expo/vector-icons';
+const SearchBar = ({width,height}) => {
+ 
   return (
-    <View style={styles.searchContainer}>
+    <View style={[styles.searchContainer,{width,height}]}>
+      <View>
       <Image
         source={{ uri: 'https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/magnifying-glass-18.png' }}  // URL to the magnifying glass image
         style={styles.icon}
       />
+      </View>
       <TextInput
         style={styles.searchInput}
         placeholder="Search furniture"
-        placeholderTextColor="#999"
-      />
+      ></TextInput>
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#E8E8E8',
-    borderRadius: 25,  
-    // paddingHorizontal: 5,
-    marginVertical: 30,
-    marginLeft:12,
-    width:280,
+    paddingHorizontal: 10,
+    marginVertical: 10,
   },
   searchInput: {
     flex: 1,
-    padding: 10,
-    paddingLeft: 8,  
+    backgroundColor: '#f5f5f5',
+    borderRadius: 25,
+    padding: 13,
   },
   icon: {
     width: 30,  
     height: 30, 
-    marginRight: -6,  
-    marginLeft:10,
   },
 });
+
 export default SearchBar;

@@ -4,23 +4,21 @@ import SearchBar from '../components/home/searchbar';
 import BottomNavigation from '../components/home/bottomnavigation';
 import FlatCard from '../components/FlatCard'; 
 import data from '../data/data.json'; 
-
+import {Svg,Path} from 'react-native-svg' ;
+import ShareIcon from '../assets/icons/Share'; 
+import Settings from '../assets/icons/Settings'
 export default function DiscoverScreen() {
   return (
     <>
       <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20, paddingHorizontal: 10 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <SearchBar width={310} />
-          <View
-            style={{
-              backgroundColor: '#f0f0f0',
-              borderRadius: 25,
-              width: 55,
-              height: 50,
-            }}
-          />
+          <View/>
+          <View style={{backgroundColor:"#f5f5f5",paddingVertical:14,paddingHorizontal:13,borderRadius:20}}>
+          <Settings/>
+          </View>
+         
         </View>
-
         <ScrollView contentContainerStyle={styles.scrollContent}>
           {data.discover.map((discover) => (
             <FlatCard 

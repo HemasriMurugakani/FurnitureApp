@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, View, Text, StyleSheet } from 'react-native';
-import SearchBar from '../components/searchbar';
+import SearchBar from '../components/home/searchbar';
 import Banner from '../components/home/banner';
 import ProductCard from '../components/home/productcard';
 import BottomNavigation from '../components/home/bottomnavigation';

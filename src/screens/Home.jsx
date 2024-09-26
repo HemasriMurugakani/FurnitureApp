@@ -42,7 +42,7 @@ const HomeScreen = () => {
           ))}
         </View>
         <View style={styles.recommendedContainer}>
-          <Text style={styles.recommendedText}>Recommended you</Text>
+          <Text style={styles.recommendedText}>Recommended  for you</Text>
           <View style={styles.productList}>
             {products.map((product, index) => (
               <ProductCard key={index} product={product} />

@@ -7,7 +7,8 @@ const ProductCard = ({ product }) => {
     <View style={styles.card}>
       <Image source={{ uri: product.image }} style={styles.productImage} />
       <Text style={styles.productName}>{product.name}</Text>
-      <Text>{product.brand}</Text>
+      <Text style={styles.productBrand}>{product.brand}</Text>
+      <Text style={styles.productdescription}>{product.description}</Text>
       <Text style={styles.price}>${product.price}</Text>
       <TouchableOpacity style={styles.heartIcon}>
         {/* <AntDesign name="hearto" size={24} color="black" /> */}
@@ -18,12 +19,13 @@ const ProductCard = ({ product }) => {
 
 const styles = StyleSheet.create({
   card: {
-    width: 150,
+    width: 180,
     borderRadius: 10,
     backgroundColor: '#fff',
     padding: 10,
     margin: 10,
     position: 'relative',
+    height:150,
   },
   productImage: {
     width: '100%',
@@ -33,10 +35,26 @@ const styles = StyleSheet.create({
   productName: {
     fontWeight: 'bold',
     marginTop: 10,
+    fontSize:14,
+    color:'black',
+  },
+  productBrand: {
+    // fontWeight: 'bold',
+    marginTop: 2,
+    fontSize:14,
+    color:'grey',
+  },
+  productdescription: {
+    // fontWeight: 'bold',
+    marginTop: 2,
+    fontSize:12,
+    color:'grey',
   },
   price: {
     marginTop: 5,
     fontWeight: 'bold',
+    fontSize:14,
+    color:'black',
   },
   heartIcon: {
     position: 'absolute',

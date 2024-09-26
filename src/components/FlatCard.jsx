@@ -19,11 +19,10 @@ const FlatCard = ({ title, description, imageUri, onPress }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#f5f5f5',
     borderRadius: 10,
     overflow: 'hidden',
-    elevation: 3,
-    shadowColor: '#000',
+    elevation: 1,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 2,
@@ -31,6 +30,7 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     marginLeft: 'auto',
+    left:20,
     width: '50%',
     height: 110,
   },

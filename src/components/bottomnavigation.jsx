@@ -1,13 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-// import HomeIcon from '../assets/Icons/HomeIcon';
 const BottomNavigation = () => {
   return (
     <>
     <View style={styles.navContainer}>
       <TouchableOpacity style={styles.navItem}>
         <Text>Home</Text>
-        {/* <HomeIcon/>  */}
+        
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
         

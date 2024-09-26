@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
-
+import {Svg,Path} from 'react-native-svg'
 
 const ArrowIcon = ({ size = 30 }) => (
   <Svg height={size} width={size} viewBox="0 0 24 16">

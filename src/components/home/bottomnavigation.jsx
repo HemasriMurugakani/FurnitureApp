@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import {Svg,Path} from 'react-native-svg'
 const BottomNavigation = () => {
   return (
     <>

@@ -11,15 +11,13 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <TouchableOpacity onPress={handlePress} style={styles.card}> {/* Wrap with TouchableOpacity */}
+    <TouchableOpacity onPress={handlePress} style={styles.card}> 
       <Image source={{ uri: product.image }} style={styles.productImage} />
       <Text style={styles.productName}>{product.name}</Text>
       <Text style={styles.productBrand}>{product.brand}</Text>
       <Text style={styles.productDescription}>{product.description}</Text>
       <Text style={styles.price}>${product.price}</Text>
-      <TouchableOpacity style={styles.heartIcon}>
-        {/* <AntDesign name="hearto" size={24} color="black" /> */}
-      </TouchableOpacity>
+     
     </TouchableOpacity>
   );
 };

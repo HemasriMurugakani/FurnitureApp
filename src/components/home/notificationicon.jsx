@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import {Svg} from 'react-native-svg' ;
+import {Svg,Path} from 'react-native-svg' ;
 const RoundImageContainer = ({ size = 100 }) => {
   return (
     <View style={[styles.container, { width: size, height: size }]}>

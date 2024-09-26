@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-
+import {Svg,Path} from 'react-native-svg'
 const ProfilePage = () => {
   const user = {
     name: "John Doe",

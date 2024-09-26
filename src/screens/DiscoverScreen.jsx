@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import SearchBar from '../components/searchbar';
-import BottomNavigation from '../components/bottomnavigation';
 import FlatCard from '../components/FlatCard'; 
-import data from '../data/data.json'; // Correct import of data.json
+import data from '../data/data.json'; 
 
 export default function DiscoverScreen() {
   return (
@@ -28,7 +27,6 @@ export default function DiscoverScreen() {
           ))}
         </ScrollView>
         <View style={{ justifyContent: 'flex-end', height: 60 }}>
-          <BottomNavigation />
         </View>
       </View>
     </>

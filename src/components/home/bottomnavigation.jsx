@@ -16,7 +16,10 @@ const BottomNavigation = ({ navigation }) => { // Destructure navigation prop
         <Text style={styles.activeText}>Home</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tab}>
+      <TouchableOpacity 
+        style={styles.tab} 
+        onPress={() => navigation.navigate('Discover')} // Navigate to Profile page
+      >
         <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <Path
             d="M12 2a10 10 0 110 20 10 10 0 010-20z"

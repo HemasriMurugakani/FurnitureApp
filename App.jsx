@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import DiscoverScreen from './src/screens/DiscoverScreen';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './src/screens/Home';
-import ProfileScreen from './src/screens/profile'; // Import ProfileScreen
-import BottomNavigation from './src/components/home/bottomnavigation'; // Import your BottomNavigation
-import Product_Detail from './src/screens/Product_Detail'
+import ProfileScreen from './src/screens/profile'; 
+import BottomNavigation from './src/components/home/bottomnavigation'; 
+import DiscoverScreen from './src/screens/DiscoverScreen';
+import Product_Detail from './src/screens/Product_Detail';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -16,6 +16,8 @@ const TabNavigator = () => {
     <Tab.Navigator tabBar={props => <BottomNavigation {...props} />}>
       <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="Discover" component={DiscoverScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="Product_Detail" component={Product_Detail} options={{ headerShown: false }} />
     </Tab.Navigator>
   );
 };
@@ -23,11 +25,8 @@ const TabNavigator = () => {
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="DiscoverScreen" screenOptions={{headerShown:false}}>
-        <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
-      <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-
+      <Stack.Navigator initialRouteName="Main">
+        <Stack.Screen name="Main" component={TabNavigator} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

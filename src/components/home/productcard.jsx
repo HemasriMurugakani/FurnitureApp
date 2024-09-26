@@ -1,15 +1,7 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation
+import { View, StyleSheet, Image } from 'react-native';
 
-const ProductCard = ({ product }) => {
-  const navigation = useNavigation(); // Access the navigation object
-
-  const handlePress = () => {
-    // Navigate to ProductDetails screen, passing the product as a parameter
-    navigation.navigate('ProductDetails', { product });
-  };
-
+const RoundIcon = ({ size = 100, imageUri }) => {
   return (
     <TouchableOpacity onPress={handlePress} style={styles.card}> 
       <Image source={{ uri: product.image }} style={styles.productImage} />
@@ -23,49 +15,17 @@ const ProductCard = ({ product }) => {
 };
 
 const styles = StyleSheet.create({
-  card: {
-    width: 180,
-    borderRadius: 10,
-    backgroundColor: '#fff',
-    padding: 10,
-    margin: 10,
-    position: 'relative',
-    height:150,
+  container: {
+    borderRadius: 50, // For circular shape
+    overflow: 'hidden', // Ensures the image fits inside the round container
+    backgroundColor: '#E8E8E8', // Set a valid background color
+    alignItems: 'center', // Center any content (optional)
+    justifyContent: 'center', // Center any content (optional)
+    marginRight:15,
   },
-  productImage: {
-    width: '100%',
-    height: 100,
-    borderRadius: 10,
-  },
-  productName: {
-    fontWeight: 'bold',
-    marginTop: 10,
-    fontSize:14,
-    color:'black',
-  },
-  productBrand: {
-    // fontWeight: 'bold',
-    marginTop: 2,
-    fontSize:14,
-    color:'grey',
-  },
-  productdescription: {
-    // fontWeight: 'bold',
-    marginTop: 2,
-    fontSize:12,
-    color:'grey',
-  },
-  price: {
-    marginTop: 5,
-    fontWeight: 'bold',
-    fontSize:14,
-    color:'black',
-  },
-  heartIcon: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
+  image: {
+    borderRadius: 50, // Ensure the image is also round
   },
 });
 
-export default ProductCard;
+export default RoundIcon;

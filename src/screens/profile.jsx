@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { Svg, Path } from 'react-native-svg';
 
 const ProfilePage = () => {
   const user = {
@@ -30,9 +29,9 @@ const ProfilePage = () => {
         <Text style={styles.sectionTitle}>Settings</Text>
         <TouchableOpacity style={styles.settingItem}>
           <View style={styles.settingItemContent}>
-            <Svg width="24" height="24" fill="#D97B3A">
+            {/* <Svg width="24" height="24" fill="#D97B3A">
               <Path d="M12 1C6.48 1 2 5.48 2 11c0 4.41 3.58 8 8 8s8-3.59 8-8c0-5.52-4.48-10-10-10zm0 18c-5.52 0-10-4.48-10-10S6.48 3 12 3s10 4.48 10 10-4.48 10-10 10z" />
-            </Svg>
+            </Svg> */}
             <Text style={styles.settingText}>Notifications</Text>
           </View>
         </TouchableOpacity>

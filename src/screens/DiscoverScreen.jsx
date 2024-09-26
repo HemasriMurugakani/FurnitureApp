@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import SearchBar from '../components/searchbar';
+import SearchBar from '../components/home/searchbar';
+import BottomNavigation from '../components/home/bottomnavigation';
 import FlatCard from '../components/FlatCard'; 
 import data from '../data/data.json'; 
 
@@ -14,7 +15,6 @@ export default function DiscoverScreen() {
             style={{
               backgroundColor: '#f0f0f0',
               borderRadius: 25,
-              padding: 13,
               width: 55,
               height: 50,
             }}
@@ -22,8 +22,13 @@ export default function DiscoverScreen() {
         </View>
 
         <ScrollView contentContainerStyle={styles.scrollContent}>
-          {data.categories.map((category) => (
-            <FlatCard key={category.name} category={category} />
+          {data.discover.map((discover) => (
+            <FlatCard 
+              key={discover.name} 
+              title={discover.name} 
+              description={discover.collection}
+              imageUri={discover.image} 
+            />
           ))}
         </ScrollView>
         <View style={{ justifyContent: 'flex-end', height: 60 }}>
@@ -34,10 +39,6 @@ export default function DiscoverScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f2f2f2',
-  },
   scrollContent: {
     paddingBottom: 20,
   },

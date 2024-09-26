@@ -1,152 +1,162 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import Product_image from '../components/Product_Image';
 
-const ProfilePage = () => {
-  const user = {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    phone: "+1 234 567 890",
-    profilePicture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksG4mm4xFN-Ufeaf1ZZ8ixWe2k4aZknK1MQ&s" // Replace with your image URL
+const Product_Detail = () => {
+  const [liked, setLiked] = useState(false); // State to track if the product is liked
+
+  const handleLike = () => {
+    setLiked(!liked); // Toggle the liked state
+  };
+
+  const productData = {
+    id: 1,
+    name: "Small Living Table",
+    brand: "Walter Knoll",
+    price: 750,
+    description: "A compact and stylish living room table, perfect for modern homes. Crafted from high-quality wood, this table features a minimalist design with clean lines.",
+    image: "https://up.yimg.com/ib/th?id=OIP.IfyYnRN9VD8yO2U9KkJFdwHaHa&pid=Api&rs=1&c=1&qlt=95&w=106&h=106"
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
-        <Image source={{ uri: user.profilePicture }} style={styles.profileImage} />
-        <Text style={styles.userName}>{user.name}</Text>
-        <Text style={styles.userEmail}>{user.email}</Text>
+        <Text style={styles.title}>Product Details</Text>
       </View>
-
-      <View style={styles.detailsContainer}>
-        <Text style={styles.sectionTitle}>Profile Details</Text>
-        <Text style={styles.detailText}>Phone: {user.phone}</Text>
-        <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.editButtonText}>Edit Profile</Text>
+      <View style={styles.imageContainer}>
+        <Product_image imageUrl={productData.image} />
+      </View>
+      <View style={styles.productInfoContainer}>
+        <View style={styles.productTextContainer}>
+          <Text style={styles.productName}>{productData.name}</Text>
+          <Text style={styles.productBrand}>{productData.brand}</Text>
+        </View>
+        <TouchableOpacity onPress={handleLike} style={styles.likeButton}>
+          <Text style={styles.likeButtonText}>{liked ? '❤️' : '🤍'}</Text> 
         </TouchableOpacity>
       </View>
-
-      <View style={styles.settingsContainer}>
-        <Text style={styles.sectionTitle}>Settings</Text>
-        <TouchableOpacity style={styles.settingItem}>
-          <View style={styles.settingItemContent}>
-            {/* <Svg width="24" height="24" fill="#D97B3A">
-              <Path d="M12 1C6.48 1 2 5.48 2 11c0 4.41 3.58 8 8 8s8-3.59 8-8c0-5.52-4.48-10-10-10zm0 18c-5.52 0-10-4.48-10-10S6.48 3 12 3s10 4.48 10 10-4.48 10-10 10z" />
-            </Svg> */}
-            <Text style={styles.settingText}>Notifications</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingItem}>
-          <View style={styles.settingItemContent}>
-            <Svg width="24" height="24" fill="#D97B3A">
-              <Path d="M12 1C6.48 1 2 5.48 2 11c0 4.41 3.58 8 8 8s8-3.59 8-8c0-5.52-4.48-10-10-10zm0 18c-5.52 0-10-4.48-10-10S6.48 3 12 3s10 4.48 10 10-4.48 10-10 10z" />
-            </Svg>
-            <Text style={styles.settingText}>Privacy Policy</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingItem}>
-          <View style={styles.settingItemContent}>
-            <Svg width="24" height="24" fill="#D97B3A">
-              <Path d="M12 1C6.48 1 2 5.48 2 11c0 4.41 3.58 8 8 8s8-3.59 8-8c0-5.52-4.48-10-10-10zm0 18c-5.52 0-10-4.48-10-10S6.48 3 12 3s10 4.48 10 10-4.48 10-10 10z" />
-            </Svg>
-            <Text style={styles.settingText}>Logout</Text>
-          </View>
-        </TouchableOpacity>
+      <Text>Colors</Text>
+      <View style={{flexDirection:'row'}}>
+      <View style={styles.outerContainer}>
+      <View style={styles.innerCircle}></View>
+    </View>
+    <View style={{flexDirection:'row',marginTop:1.5,}}>
+    <View style={styles.innerCircle1}></View>
+    <View style={styles.innerCircle2}></View>
+    <View style={styles.innerCircle3}></View>
+    <View style={styles.innerCircle4}></View>
+    </View>
       </View>
-
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>Version 1.0.0</Text>
+      <Text>Product Description</Text>
+      <Text style={styles.productDescription}>{productData.description}</Text>
+      <View style={{flexDirection:'row'}}>
+      <View>
+      <Text>Total Price</Text>
+      <Text style={styles.productPrice}>${productData.price}</Text>
       </View>
-    </ScrollView>
+      <View style={{width:50}}>
+        <Text>Add to Cart</Text>
+      </View>
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    padding: 16,
+    backgroundColor: '#fff',
     flex: 1,
-    backgroundColor: 'white',
   },
   header: {
-    alignItems: 'center',
-    backgroundColor: 'white',
-    padding: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#dddddd',
+    marginBottom: 20,
   },
-  profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
-    borderWidth: 2,
-    borderColor: '#D97B3A',
-  },
-  userName: {
+  title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
   },
-  userEmail: {
-    fontSize: 16,
-    color: '#666',
-  },
-  detailsContainer: {
-    padding: 20,
-    backgroundColor: '#ffffff',
-    marginBottom: 10,
-    borderRadius: 8,
-    elevation: 2,
-  },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    color: '#D97B3A',
-  },
-  detailText: {
-    fontSize: 16,
-    marginBottom: 10,
-  },
-  editButton: {
-    backgroundColor: '#D97B3A',
-    paddingVertical: 10,
-    borderRadius: 5,
+  imageContainer: {
     alignItems: 'center',
+    marginBottom: 20,
   },
-  editButtonText: {
-    color: '#ffffff',
-    fontWeight: 'bold',
-  },
-  settingsContainer: {
-    padding: 20,
-    backgroundColor: '#ffffff',
-    borderRadius: 8,
-    elevation: 2,
-  },
-  settingItem: {
-    paddingVertical: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: '#dddddd',
-  },
-  settingItemContent: {
+  productInfoContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 10,
   },
-  settingText: {
-    fontSize: 16,
-    marginLeft: 10,
+  productTextContainer: {
+    flex: 1,
+  },
+  productName: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: 'black',
+  },
+  productBrand: {
+    fontSize: 15,
+    color: '#666',
+  },
+  likeButton: {
+    padding: 10,
+  },
+  likeButtonText: {
+    fontSize: 25,
+  },
+  productPrice: {
+    fontSize: 18,
+    color: '#000',
+    marginVertical: 10,
+  },
+  productDescription: {
+    fontSize: 14,
     color: '#333',
   },
-  footer: {
-    padding: 20,
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    borderTopWidth: 1,
-    borderTopColor: '#dddddd',
+  outerContainer: {
+    height: 26,
+    width: 27,
+    borderColor: '#cbcecf',
+    borderWidth: 1, 
+     borderRadius: 23, 
+     backgroundColor:'white',
+    padding: 5,
+    alignItems: 'center', 
+    justifyContent: 'center', 
   },
-  footerText: {
-    fontSize: 14,
-    color: '#666',
+  innerCircle: {
+    height: 20,
+    width: 20,
+    backgroundColor: 'brown',
+    borderRadius: 20,
+  },
+  innerCircle1: {
+    marginLeft:8,
+    height: 20,
+    width: 20,
+    backgroundColor: 'brown',
+    borderRadius: 20,
+  },
+  innerCircle2: {
+    marginLeft:8,
+    height: 20,
+    width: 20,
+    backgroundColor: 'brown',
+    borderRadius: 20,
+  },
+  innerCircle3: {
+    marginLeft:8,
+    height: 20,
+    width: 20,
+    backgroundColor: 'brown',
+    borderRadius: 20,
+  },
+  
+  innerCircle4: {
+    marginLeft:8,
+    height: 20,
+    width: 20,
+    backgroundColor: 'brown',
+    borderRadius: 20,
   },
 });
 
-export default ProfilePage;
+export default Product_Detail;
